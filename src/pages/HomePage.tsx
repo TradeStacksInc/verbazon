@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, Sparkles, MessageSquare, Mic } from 'lucide-react';
+import { ArrowRight, BookOpen, Sparkles, MessageSquare, Mic, ExternalLink } from 'lucide-react';
 import BookCarousel from '../components/books/BookCarousel';
 import CategoryList from '../components/books/CategoryList';
 import { mockBooks } from '../data/mockData';
@@ -34,7 +34,7 @@ const HomePage: React.FC = () => {
               Discover AI-powered books that you can talk to using the author's voice. 
               Experience reading like never before.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Link
                 to="/browse"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg 
@@ -49,6 +49,20 @@ const HomePage: React.FC = () => {
               >
                 Become an Author
               </Link>
+            </div>
+            
+            {/* Built with Bolt.new attribution in hero */}
+            <div className="flex items-center text-gray-300 text-sm">
+              <span className="mr-2">Built with</span>
+              <a 
+                href="https://bolt.new" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center text-blue-300 hover:text-blue-200 transition-colors"
+              >
+                <span className="font-medium">Bolt.new</span>
+                <ExternalLink className="ml-1 h-3 w-3" />
+              </a>
             </div>
           </div>
         </div>
@@ -156,6 +170,24 @@ const HomePage: React.FC = () => {
           >
             Get Started
           </Link>
+        </div>
+      </section>
+
+      {/* Built with Bolt.new section at bottom */}
+      <section className="py-8 px-4 bg-gray-900 border-t border-gray-800">
+        <div className="container mx-auto text-center">
+          <div className="flex items-center justify-center text-gray-400 text-sm">
+            <span className="mr-2">Built with</span>
+            <a 
+              href="https://bolt.new" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center text-blue-400 hover:text-blue-300 transition-colors font-medium"
+            >
+              <span>Bolt.new</span>
+              <ExternalLink className="ml-1 h-3 w-3" />
+            </a>
+          </div>
         </div>
       </section>
     </div>
