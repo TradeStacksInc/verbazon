@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, BookOpen, Sparkles, MessageSquare, Mic, ExternalLink } from 'lucide-react';
 import BookCarousel from '../components/books/BookCarousel';
 import CategoryList from '../components/books/CategoryList';
+import AnimatedDemo from '../components/demo/AnimatedDemo';
 import { mockBooks } from '../data/mockData';
 
 const HomePage: React.FC = () => {
@@ -65,6 +66,13 @@ const HomePage: React.FC = () => {
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Animated Demo Section */}
+      <section className="py-16 px-4 bg-gray-900">
+        <div className="container mx-auto">
+          <AnimatedDemo />
         </div>
       </section>
 
